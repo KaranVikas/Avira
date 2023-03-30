@@ -72,7 +72,7 @@ const Header = () => {
               <div className="d-flex body2Semi accent">
 
                 <Li2 className="nav-item">
-                  <A2 className="nav-link active" aria-current="page" href="#"><I><BsPerson/></I>Login/Register</A2>
+                  <A2 className="nav-link active" aria-current="page" href="/login"><I><BsPerson/></I>Login/Register</A2>
                 </Li2>
                 <Li2 className="nav-item">
                   <A2 className="nav-link active" aria-current="page" href="#">

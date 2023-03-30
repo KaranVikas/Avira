@@ -21,6 +21,7 @@ align-items: center;
 `
 
 const LoginContent = styled.div`
+/* background-color: bisque; */
   /* display:flex;
   flex-direction: column;
   justify-content: center;
@@ -80,6 +81,7 @@ border-color: red; */
 `
 const GroupBtn  = styled.div`
   position:relative;
+  
 `
 const PasswordBtn = styled.button`
   position: absolute;
@@ -116,23 +118,17 @@ const LoginPage: React.FC<PageProps> = () => {
         <Login className="h-100">
           <LoginContent className="">
             <H1>Nice to see you again!</H1>
-            <div class="input-group mb-3 d-flex justify-content-center">
+            <div class="mb-3 d-flex justify-content-center">
               <InputWrapper
                 type="text"
-                class="form-control"
                 placeholder="Email or phone number"
-                aria-label="Username"
-                aria-describedby="basic-addon1"
               />
               
             </div>
-            <GroupBtn class="input-group mb-3 d-flex justify-content-center" >
+            <GroupBtn class="mb-3 position-relative" >
             <InputWrapper
                 type={passwordShow ? "text" : "password"}
-                class="form-control"
                 placeholder="Enter Password"
-                aria-label="Password"
-                aria-describedby="basic-addon1"
               />
               <PasswordBtn className="btn" onClick={togglePassword}>{passwordShow ? <i><BsEyeFill/></i> : <i><BsEyeFill/></i>}</PasswordBtn>
             </GroupBtn>
