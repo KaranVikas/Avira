@@ -16,6 +16,7 @@ const Contain = styled.div`
 margin: 0px 56px;
 `
 const WrapStyle = styled.div`
+position:relative;
 /* background-image: url(${Men}); */
 /* height: ${({height})=>height??'500px'}; */
 background-image: ${(props)=>`url(${props.imgU})`};
@@ -38,10 +39,10 @@ const Category = () => {
             <div className="col">
                 <div className="row gap-5 justify-content-between">
                     <WrapStyle className="col-5 " imgU={Men}>
-                        <CategoryTag>{Men}</CategoryTag>
+                        <CategoryTag data="Men"   />
                     </WrapStyle>
                     <WrapStyle className="col-6" imgU={Women}>
-                    <CategoryTag>{Women}</CategoryTag>
+                    <CategoryTag data="Women"  />
                     </WrapStyle>
                 </div>
                 
@@ -49,16 +50,20 @@ const Category = () => {
             <Colu className="col">
                 <div className="row gap-3 d-flex justify-content-between align-content-between ">
                         <WrapStyle className="col" imgU={Access} active>
-                            <CategoryTag>Men</CategoryTag>
+                            <CategoryTag data="Accessories" />
                         </WrapStyle>
                         <WrapStyle className="col" imgU={Kids} active>
-                            <CategoryTag data="Men" />
+                            <CategoryTag data="Kids"  />
                         </WrapStyle>
                 </div>
 
                 <div className="row gap-3 d-flex justify-content-between align-content-between ">
-                        <WrapStyle className="col" imgU={Footwear} active>1</WrapStyle>
-                        <WrapStyle className="col"  imgU={Beauty} active>2</WrapStyle>
+                        <WrapStyle className="col" imgU={Footwear} active>
+                            <CategoryTag data="Footwear" bottom/>
+                        </WrapStyle>
+                        <WrapStyle className="col" imgU={Beauty} active>
+                            <CategoryTag data="Beauty" bottom/>
+                        </WrapStyle>
                 </div>
                 
             </Colu>

@@ -3,6 +3,7 @@ import type { HeadFC, PageProps } from "gatsby"
 import Header from "../Components/Header"
 import About from "../Components/about"
 import Category from "../Components/categories"
+import Products from "../Components/products"
 
 
 const ShopPage: React.FC<PageProps> = () => {
@@ -10,7 +11,7 @@ const ShopPage: React.FC<PageProps> = () => {
       <>
         <Header/>
         <Category/>
-        
+        <Products/>
       </>
   )
 }
