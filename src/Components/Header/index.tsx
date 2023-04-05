@@ -52,16 +52,16 @@ const Header = () => {
               
               <div className="d-flex">
               <Li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <a className="nav-link active" aria-current="page" href="/">Home</a>
               </Li>
               <Li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Shop</a>
+                <a className="nav-link active" aria-current="page" href="/shop">Shop</a>
               </Li>
               <Li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="#">Blogs</a>
               </Li>
               <Li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">About</a>
+                <a className="nav-link active" aria-current="page" href="/about">About</a>
               </Li>
               <Li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="#">Contact</a>
