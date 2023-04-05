@@ -19,7 +19,7 @@ const WrapStyle = styled.div`
 position:relative;
 /* background-image: url(${Men}); */
 /* height: ${({height})=>height??'500px'}; */
-background-image: ${(props)=>`url(${props.imgU})`};
+/* background-image: ${(props)=>`url(${props.imgU})`}; */
 height: ${(props) => props.active ? "300px" : "640px"};
 background-position: center;
 background-repeat: no-repeat;
@@ -31,6 +31,13 @@ display:flex;
 flex-direction: column;
 justify-content: space-between;
 `
+
+const Img = styled.img`
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+`
+
 const Category = () => {
   return (
     <div classname="container-fluid">
@@ -38,10 +45,12 @@ const Category = () => {
         <Contain className="row gap-5">
             <div className="col">
                 <div className="row gap-5 justify-content-between">
-                    <WrapStyle className="col-5 " imgU={Men}>
+                    <WrapStyle className="col-6 ">
+                        <Img src={Men} />
                         <CategoryTag data="Men"   />
                     </WrapStyle>
-                    <WrapStyle className="col-6" imgU={Women}>
+                    <WrapStyle className="col-5">
+                    <Img src={Women} />
                     <CategoryTag data="Women"  />
                     </WrapStyle>
                 </div>
@@ -49,19 +58,23 @@ const Category = () => {
             </div>
             <Colu className="col">
                 <div className="row gap-3 d-flex justify-content-between align-content-between ">
-                        <WrapStyle className="col" imgU={Access} active>
+                        <WrapStyle className="col" active>
+                            <Img src={Access} />
                             <CategoryTag data="Accessories" />
                         </WrapStyle>
-                        <WrapStyle className="col" imgU={Kids} active>
+                        <WrapStyle className="col" active>
+                            <Img src={Kids} />
                             <CategoryTag data="Kids"  />
                         </WrapStyle>
                 </div>
 
                 <div className="row gap-3 d-flex justify-content-between align-content-between ">
-                        <WrapStyle className="col" imgU={Footwear} active>
+                        <WrapStyle className="col" active>
+                            <Img src={Footwear} />
                             <CategoryTag data="Footwear" bottom/>
                         </WrapStyle>
-                        <WrapStyle className="col" imgU={Beauty} active>
+                        <WrapStyle className="col" active>
+                            <Img src={Beauty} />
                             <CategoryTag data="Beauty" bottom/>
                         </WrapStyle>
                 </div>

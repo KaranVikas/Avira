@@ -7,6 +7,17 @@
     --accent:#DB6B97;
 }
 
+.primary{
+    color:#2D2D2D
+}
+.secondary{
+    color:#FFFFFF
+}
+
+.tertiary{
+    color:#737373
+}
+
 .accent{
     color:var(--accent);
 }

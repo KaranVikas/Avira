@@ -23,7 +23,6 @@ const Products = () => {
           <ProductCard/>
           <ProductCard/>
           <ProductCard/>
-          
         </ProductWrap>
     </ContainWrap>
   )
