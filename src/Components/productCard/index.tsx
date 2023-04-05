@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import ProductItem from '../productItem';
-
+import AddBtn from '../addBtn';
 
 const Brand = styled.h3`
     font-weight: 600;
@@ -31,6 +31,8 @@ const NPrice = styled.span`
     text-decoration: none;
 `
 
+
+
 const ProductCard = () => {
   return (
     <div>
@@ -38,7 +40,7 @@ const ProductCard = () => {
         <Brand>ZARA</Brand>
         <Desc>Green High Neck Knit Sweater</Desc>
         <Price>Rs. 2999<NPrice>Rs. 2999</NPrice></Price>
-        
+        <AddBtn />
     </div>
   )
 }
