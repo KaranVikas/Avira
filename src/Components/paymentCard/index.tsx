@@ -106,19 +106,16 @@ const PaymentCard:React.FC<PaymentProps> = ({
                 <div className="col-6">
                     <InputWrapper
                     type="text"
-                    class="form-control"
+                    
                     placeholder="MM/YY"
-                    aria-label="Username"
-                    aria-describedby="basic-addon1"
+                   
                 />
                 </div>
                 <div className="col-5">
                     <InputWrapper
                     type="text"
-                    class="form-control"
                     placeholder="CVV"
-                    aria-label="Username"
-                    aria-describedby="basic-addon1"
+                    
                 />
                 </div>
             </div>
