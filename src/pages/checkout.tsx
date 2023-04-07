@@ -24,16 +24,20 @@ const checkout: React.FC<PageProps> = () => {
       <>
         <Header/>
         <ContainWrap>
-            <Content>
-                <Order/>
-                
-                <div>
-                  <Vertical/>
-                  hi
+            <Content className="row">
+                <div className="col-5">
+                  <Order/>
                 </div>
-                <div>
+                
+                <div className="col-1 d-flex justify-content-center">
+                  <Vertical/>
+                
+                </div>
+
+                <div className="col-5">
                   <Charges/>
                 </div>
+
             </Content>
         </ContainWrap>
         {/* <Header/> */}

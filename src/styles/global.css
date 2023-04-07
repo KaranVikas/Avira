@@ -5,17 +5,22 @@
     --secondary: #FFFFFF;
     --tertiary: #737373;
     --accent:#DB6B97;
+    --green: #2DC071;
+}
+
+.green{
+    color:#2DC071;
 }
 
 .primary{
-    color:#2D2D2D
+    color:#2D2D2D;
 }
 .secondary{
-    color:#FFFFFF
+    color:#FFFFFF;
 }
 
 .tertiary{
-    color:#737373
+    color:#737373;
 }
 
 .accent{

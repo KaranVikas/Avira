@@ -47,7 +47,6 @@ const InputWrapper = styled.input`
   border-radius: 8px;
   height: 48px;
   width: 360px;
-  border-radius: 8px;
   padding: 12px 10px;
   outline: none;
   ::placeholder {
