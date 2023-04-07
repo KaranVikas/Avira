@@ -107,17 +107,11 @@ const ContactPage: React.FC<PageProps> = () => {
               <InputField>
                   <InputWrapper
                     type="text"
-                    class="form-control"
                     placeholder="Name"
-                    aria-label="Username"
-                    aria-describedby="basic-addon1"
                   />
                   <InputWrapper
                     type="text"
-                    class="form-control"
                     placeholder="Email"
-                    aria-label="Username"
-                    aria-describedby="basic-addon1"
                   />
                   <TextArea 
                   cols={4}
