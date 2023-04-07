@@ -89,18 +89,14 @@ const PaymentCard:React.FC<PaymentProps> = ({
 
             <InputWrapper
                  type="text"
-                 class="form-control"
                  placeholder="Card Number"
-                 aria-label="Username"
-                 aria-describedby="basic-addon1"
+                 
             />
             
             <InputWrapper
                  type="text"
-                 class="form-control"
                  placeholder="Name on Card"
-                 aria-label="Username"
-                 aria-describedby="basic-addon1"
+                 
             />
             <div className="row justify-content-between">
                 <div className="col-6">
