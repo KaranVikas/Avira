@@ -8,16 +8,20 @@ import card4 from '../../assets/cardImage4.png';
 
 const WrapperContain = styled.div`
 padding:64px 56px;
-
+@media screen and (max-width: 450px) {
+    padding:40px 40px;
+}
 `
 
 const Section1 = styled.div`
 height:80vh;
-background-color: aquamarine;
 margin-right: 32px;
 background-image: url(${card1});
 background-repeat: no-repeat;
 background-size: cover ;
+@media screen and (max-width: 450px) {
+    margin-right: 0px;
+}
 `
 
 const Section2 = styled.div`
@@ -58,13 +62,13 @@ export const HeroSection = () => {
         <>
             <WrapperContain className="container-fluid">
                 <div className="row gap-3 justify-content-center">
-                    <Section1 className="col-4">
+                    <Section1 className="col-sm-4 col-12">
                         <Card 
                             title="Brands Everyone’s Crushing on"
                             content="Explore All"
                             link="" />
                     </Section1>
-                    <Section2 className="col-7">
+                    <Section2 className="col-sm-7 col-12">
                         <Sec21 className="row">
                             <div className="col">
 

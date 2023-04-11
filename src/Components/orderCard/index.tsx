@@ -10,12 +10,18 @@ const Card = styled.div`
     border-radius: 8px;
     padding:30px;
     margin: 40px 0px;
-
+    @media screen and (max-width: 450px) {
+    padding:20px;
+    margin: 20px 0px;
+}
 `
 const Img = styled.img`
     margin-right:48px;
     width: 112px;
     height: 170px;
+    @media screen and (max-width: 450px) {
+    margin-right:20px;
+}
 `
 const ProdDetails = styled.div`
     margin-right: 40px;
@@ -86,7 +92,7 @@ const OrderCard = () => {
             </ProdDetails>
 
             </div>
-           <div className="col-1">
+           <div className=" col-1">
                 <CloseBtn><Close/></CloseBtn>
            </div>
 

@@ -15,6 +15,12 @@ const DelCharge = styled.div`
     flex-direction:row;
     justify-content: center;
     align-items: center;
+    @media screen and (max-width: 450px) {
+    margin-top: 20px;
+    padding: 16px 20px;
+    gap: 0px;
+
+}
 `
 
 const Coupon = styled.h1`
@@ -22,7 +28,12 @@ const Coupon = styled.h1`
     color: #000000;
 `
 const DelMess = styled.div`
+
 margin-left:32px;
+@media screen and (max-width: 450px) {
+    margin-left: 16px;
+
+}
 `
 
 const Span = styled.span`

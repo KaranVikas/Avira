@@ -10,7 +10,22 @@ padding:8px 56px;
 height:100px;
 /* box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.25); */
 border-bottom: 2px solid rgba(0, 0, 0, 0.25);
+@media screen and (max-width: 450px) {
+  padding:8px 10px;
+}
 
+`
+
+const Contain = styled.div`
+@media screen and (max-width: 450px) {
+    
+}
+`
+
+const Nav = styled.nav`
+@media screen and (max-width: 450px) {
+ 
+}
 `
 
 const Li = styled.li`
@@ -24,6 +39,24 @@ color:#DB6B97;
 const A2 = styled.a`
 color: #DB6B97 !important;
 `
+
+const List = styled.div`
+  @media screen and (max-width: 450px) {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+`
+
+const List2 = styled.div`
+  @media screen and (max-width: 450px) {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
+}
+`
 const I = styled.i`
 width:18px;
 height:18px;
@@ -31,13 +64,18 @@ margin-right: 8px;
 `
 const LogoDiv = styled.div`
 width:30%;
+@media screen and (max-width: 450px) {
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+}
 `
 
 const Header = () => {
   return (
     <WrapperContain className="container-fluid">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
-        <div className="container-fluid ">
+        <Contain className="container-fluid ">
           <LogoDiv>
 
             <a className="navbar-brand" href="#"><Logo/></a>
@@ -50,7 +88,7 @@ const Header = () => {
           <div className="collapse navbar-collapse body1Regular" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-between">
               
-              <div className="d-flex">
+              <List className="d-flex">
               <Li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">Home</a>
               </Li>
@@ -66,10 +104,10 @@ const Header = () => {
               <Li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/contact">Contact</a>
               </Li>
-              </div>
+              </List>
               
            
-              <div className="d-flex body2Semi accent">
+              <List2 className="d-flex body2Semi accent">
 
                 <Li2 className="nav-item">
                   <A2 className="nav-link active" aria-current="page" href="/login"><I><BsPerson/></I>Login/Register</A2>
@@ -90,7 +128,7 @@ const Header = () => {
                   </A2>
                 </Li2>
                 
-              </div>
+              </List2>
 
             </ul>
             {/* <form className="d-flex" role="search">
@@ -98,7 +136,7 @@ const Header = () => {
               <button className="btn btn-outline-success" type="submit">Search</button>
             </form> */}
           </div>
-        </div>
+        </Contain>
       </nav>
     </WrapperContain>
 //     <div>

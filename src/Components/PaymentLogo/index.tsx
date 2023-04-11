@@ -11,11 +11,16 @@ const Center = styled.div`
     display:flex;
     justify-content:center;
     margin-top: 32px;
+    margin-bottom: 24px;
 `
 const ContentWrap = styled.div`
     display: flex;
     justify-content: space-evenly;
     width:80%;
+  @media screen and (max-width: 450px){
+    justify-content: space-between;
+    width:100%
+  }
 `
 const Img = styled.img`
     width: 64px;

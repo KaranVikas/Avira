@@ -12,12 +12,15 @@ margin-bottom: 32px;
 `
 
 const Login = styled.div`
-width: 35%;
+width: 40%;
 /* height:100%; */
 margin: auto;
 display:flex;
 justify-content:center;
 align-items: center;
+@media screen and (max-width:450px){
+  width:100%;
+}
 `
 
 const LoginContent = styled.div`
@@ -31,6 +34,9 @@ const LoginContent = styled.div`
 const Wrapper = styled.div`
   height: 100vh;
   overflow: hidden;
+  @media screen and (max-width: 450px){
+    /* margin:20px 20px; */
+  }
 `
 const BackImg = styled.img`
   width:100%;
@@ -55,6 +61,9 @@ const InputWrapper = styled.input`
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;
+  }
+  @media(max-width: 320px){
+   max-width: 280px;
   }
 
 `
@@ -81,6 +90,8 @@ border-color: red; */
 `
 const GroupBtn  = styled.div`
   position:relative;
+  display: flex;
+  justify-content: center;
   
 `
 const PasswordBtn = styled.button`
@@ -111,7 +122,7 @@ const LoginPage: React.FC<PageProps> = () => {
   return (
     <>
       <Wrapper className="d-flex">
-        <Section1 className="h-100">
+        <Section1 className="h-100 d-none d-md-block">
           
           <BackImg src={Backg} />
         </Section1>

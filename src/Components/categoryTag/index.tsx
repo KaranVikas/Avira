@@ -24,6 +24,12 @@ const ButtonTag = styled.button`
   font-size: 16px;
   line-height: 24px;
   border:none;
+  @media screen and (max-width: 450px) {
+    width: 160px;
+    height: 36px;
+    font-size: 20px;
+    line-height: 24px;
+}
 `
 const CategoryTag: React.FC<ButtonProps> = ({
   data,

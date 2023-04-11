@@ -9,6 +9,9 @@ import Charges from "../Components/charges"
 
 const ContainWrap = styled.div`
   margin: 40px 96px 48px;
+  @media screen and (max-width: 450px) {
+    margin: 40px 20px 48px;
+}
 `
 
 const Content = styled.div`
@@ -25,16 +28,16 @@ const checkout: React.FC<PageProps> = () => {
         <Header/>
         <ContainWrap>
             <Content className="row">
-                <div className="col-5">
+                <div className="col-12 col-md-5">
                   <Order/>
                 </div>
                 
-                <div className="col-1 d-flex justify-content-center">
+                <div className="d-none d-md-block col-1 d-flex justify-content-center">
                   <Vertical/>
                 
                 </div>
 
-                <div className="col-5">
+                <div className="col-12 col-md-5">
                   <Charges/>
                 </div>
 

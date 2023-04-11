@@ -30,23 +30,26 @@ margin: 0px 16px;
 const Order = () => {
   return (
     <OrderContent>
+
         {/* <Head>
               <h1 className="m-0">ORDER SUMMARY</h1>
               <DotMargin><Dot/></DotMargin>
               <Total className="body2Semi">345 Items</Total>
-        </Head> */}
+        </Head>
         
-         {/* <OrderCard/>
-        <OrderCard/> */}
+         <OrderCard/>
+        <OrderCard/>  */}
 
         {/* Component 2 */}
 
-        {/* <CheckHead data="SELECT DELIVERY ADDRESS" btnData="ADD NEW ADDRESS" />
+        {/* <CheckHead data="SELECT DELIVERY ADDRESS" btndata="ADD NEW ADDRESS" />
 
         <AddressCard/> 
         <AddressCard/> 
         <AddressCard/> 
            */}
+
+        <CheckHead data="SELECT PAYMENT OPTION"  noBtn />
 
         <PaymentOption data="Cash On Delivery" className="d-flex" />
         <PaymentOption data="PhonePay/Google Pay/ BHIM UPI" className="d-flex" />

@@ -10,12 +10,21 @@ import CategoryTag from '../categoryTag'
 
 const H1 = styled.h1`
 margin: 64px 0px 40px 56px;
+@media screen and (max-width: 450px) {
+    margin: 32px 0px 20px 28px;
+    font-size: 20px;
+    line-height: 20px;
+}
 `
 
 const Contain = styled.div`
 margin: 0px 56px;
+@media screen and (max-width: 450px) {
+    margin: 0px 26px;
+}
 `
 const WrapStyle = styled.div`
+padding:0px;
 position:relative;
 /* background-image: url(${Men}); */
 /* height: ${({height})=>height??'500px'}; */
@@ -30,6 +39,9 @@ const Colu = styled.div`
 display:flex;
 flex-direction: column;
 justify-content: space-between;
+@media screen and (max-width: 450px) {
+    margin-right: 0px;
+}
 `
 
 const Img = styled.img`
@@ -43,20 +55,20 @@ const Category = () => {
     <div classname="container-fluid">
         <H1>SHOP BY CATEGORIES</H1>
         <Contain className="row gap-5">
-            <div className="col">
-                <div className="row gap-5 justify-content-between">
-                    <WrapStyle className="col-6 ">
+            <div className="col-sm col-12">
+                <div className="row gap-sm-0 gap-5 justify-content-between">
+                    <WrapStyle className="col-sm-6 col-12 ">
                         <Img src={Men} />
                         <CategoryTag data="Men"   />
                     </WrapStyle>
-                    <WrapStyle className="col-5">
+                    <WrapStyle className="col-sm-5 col-12">
                     <Img src={Women} />
                     <CategoryTag data="Women"  />
                     </WrapStyle>
                 </div>
                 
             </div>
-            <Colu className="col">
+            <Colu className="col-12 col-sm gap-3 gap-sm-0">
                 <div className="row gap-3 d-flex justify-content-between align-content-between ">
                         <WrapStyle className="col" active>
                             <Img src={Access} />

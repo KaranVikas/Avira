@@ -22,6 +22,9 @@ const Title = styled.div`
     /* @media screen and (min-width: 2000px) {
         font-size: 54px;
     } */
+    @media screen and (max-width: 450px) {
+    margin-top: 40px;
+}
 `
 
 const Content = styled.div`
@@ -39,6 +42,9 @@ const Content2 = styled.div`
     line-height: 24px;
     color: rgba(115, 115, 115, 1);
     margin-bottom: 96px;
+    @media screen and (max-width: 450px) {
+    margin-bottom: 43px;
+}
 
 `
 const Img = styled.img`
@@ -54,38 +60,37 @@ const H2 = styled.h2`
 const About = () => {
   return (
     <WrapperContainer className="container-fluid">
-        <div className="row">
+        <div className="row d-flex flex-column-reverse flex-sm-row">
 
-        <div className="col-8">
+        <div className="col-12 col-sm-8">
+            <Contain className="container">    
+                <Title>ABOUT US.</Title>
+                <Content >{data.dataitem1}</Content>
+                <Content2>{data.dataitem2}</Content2>
+            <div className="body1Regular ">
 
-        <Contain className="container">    
-            <Title>ABOUT US.</Title>
-            <Content >{data.dataitem1}</Content>
-            <Content2>{data.dataitem2}</Content2>
-        <div className="body1Regular ">
+            </div>
+            <div className="row d-flex flex-column flex-sm-row ">
+                {
+                    data2.map((item) => {
+                        return(
 
-        </div>
-        <div className="row">
-            {
-                data2.map((item) => {
-                    return(
-
-                            <div className="col" key={item.id}>
-                                <div className="desktopDisplay">
-                                    {item.title}
+                                <div className="col" key={item.id}>
+                                    <div className="desktopDisplay">
+                                        {item.title}
+                                    </div>
+                                    <H2>{item.content}</H2>
                                 </div>
-                                <H2>{item.content}</H2>
-                            </div>
 
-                        
-                    )
-                })
-            }
-        </div>   
-        </Contain>
+                            
+                        )
+                    })
+                }
+            </div>   
+            </Contain>
         </div>
 
-        <div className="col-4 p-0">
+        <div className="col-12 col-sm-4 p-0">
             <Img src={aboutImg} alt="about image"/>
         </div>    
             

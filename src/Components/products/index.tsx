@@ -13,12 +13,16 @@ const H1 = styled.h1`
 const ProductWrap = styled.div`
   display:flex;
   justify-content: space-between;
+  @media screen and (max-width: 450px) {
+    flex-direction: column;
+    align-items:center;
+}
 `
 const Products = () => {
   return (
     <ContainWrap>
         <H1>PRODUCTS AT SLASHED PRICES</H1>
-        <ProductWrap>
+        <ProductWrap className="gap-3 gap-sm-0">
           <ProductCard/>
           <ProductCard/>
           <ProductCard/>

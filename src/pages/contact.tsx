@@ -10,13 +10,24 @@ const ContainWrap = styled.div`
   margin-bottom:150px;
   display: flex;
   justify-content: space-between;
+  @media screen and (max-width:450px ){
+    margin: 25px;
+    flex-direction: column    
+  }
 `
 const ContactForm = styled.div`
   margin-left:128px;
+  @media screen and (max-width:450px){
+    margin-bottom: 20px;
+    margin-left:0px
+  }
 `
 
 const H3 = styled.h3`
   margin-bottom: 40px;
+  @media screen and (max-width:450px ){
+    margin-bottom: 20px;
+  }
 `
 const InputWrapper = styled.input`
   margin-bottom: 16px;
@@ -55,6 +66,9 @@ const TextArea = styled.textarea`
     font-size: 14px;
     line-height: 24px;
   }
+  @media screen and (max-width: 450px) {
+    margin-bottom:20px;
+  }
 `
 const InputField = styled.div`
 `
@@ -62,6 +76,9 @@ const InputField = styled.div`
 const Location = styled.div`
   padding:86px 68px;
   background: #DB6B97;
+  @media screen and (max-width:450px) {
+  padding: 43px 34px;
+  }
 `
 
 const P = styled.p`
@@ -72,6 +89,9 @@ const P = styled.p`
 const IconWrap = styled.div`
   display: flex;
   margin-bottom: 40px;
+  @media screen and (max-width:450px) {
+    margin-bottom: 20px;
+  }
 `
 
 const Image = styled.img`
@@ -101,7 +121,7 @@ const ContactPage: React.FC<PageProps> = () => {
     <>
         <Header/>
         <ContainWrap>
-          <ContactForm className="col-3">
+          <ContactForm className="col-12 col-sm-3">
               <h1>CONTACT US</h1>
               <H3 className="body2Regular">Feel free to contact us any time. We will get back to you as soon as we can.</H3>
               <InputField>
@@ -123,7 +143,7 @@ const ContactPage: React.FC<PageProps> = () => {
               <Button>Send</Button>
           </ContactForm>
 
-          <Location className="col-6">
+          <Location className="col-12 col-sm-6">
             <IconWrap className='body1Regular'>
               <LocationIcon/>
                 <P>
@@ -154,13 +174,15 @@ const ContactPage: React.FC<PageProps> = () => {
                 </div>
             </IconWrap>
 
-            <Bag>
+            <Bag className="d-none d-sm-block">
               <Image src={IconGrp}></Image>
             </Bag>
 
           </Location>
           
-          <Bag><Shopping/></Bag>
+          <Bag className="d-none d-sm-block">
+            <Shopping/>
+          </Bag>
         </ContainWrap>     
         
 

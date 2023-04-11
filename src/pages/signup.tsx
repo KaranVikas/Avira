@@ -111,7 +111,7 @@ const SignUpPage: React.FC<PageProps> = () => {
   return (
     <>
       <Wrapper className="d-flex">
-        <Section1 className="h-100">
+        <Section1 className="h-100 d-none d-md-block">
           
           <BackImg src={Backg} />
         </Section1>
