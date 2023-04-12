@@ -6,6 +6,12 @@ import styled from "styled-components";
 import Backg from "../assets/LeftSection.png";
 import Button from '../Components/global/Button';
 import { BsEyeFill } from 'react-icons/bs';
+import { signInWithGoogle } from '../Firebase/firebase';
+import { auth } from '../Firebase/firebase';
+import { signInWithEmailAndPassword } from "firebase/auth";
+import { navigate } from "gatsby"
+
+
 
 const H1 = styled.h1`
 margin-bottom: 32px;
@@ -109,16 +115,31 @@ const Section1 = styled.div`
 
 
 const LoginPage: React.FC<PageProps> = () => {
-
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [passwordShow , setPasswordShow] = useState(false);
+
+  const login = () => {
+    
+    signInWithEmailAndPassword(auth, email, password)
+      .then((userCredentail:any) => {
+        console.log(userCredentail);
+
+   
+        navigate('/')
+      })
+      .catch((error:any) => {
+        console.log(error);
+      });
+  };
 
   const togglePassword = () => {
     setPasswordShow(!passwordShow);
   } 
 
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-  }
+  // const handleSubmit = (e: any) => {
+  //   e.preventDefault();
+  // }
   return (
     <>
       <Wrapper className="d-flex">
@@ -133,6 +154,7 @@ const LoginPage: React.FC<PageProps> = () => {
               <InputWrapper
                 type="text"
                 placeholder="Email or phone number"
+                onChange={(e:any) => setEmail(e.target.value)}
               />
               
             </div>
@@ -140,6 +162,7 @@ const LoginPage: React.FC<PageProps> = () => {
             <InputWrapper
                 type={passwordShow ? "text" : "password"}
                 placeholder="Enter Password"
+                onChange={(e:any) => setPassword(e.target.value)}
               />
               <PasswordBtn className="btn" onClick={togglePassword}>{passwordShow ? <i><BsEyeFill/></i> : <i><BsEyeFill/></i>}</PasswordBtn>
             </GroupBtn>
@@ -166,9 +189,10 @@ const LoginPage: React.FC<PageProps> = () => {
 
             {/* <Button>Sign in</Button> */}
             <Button
+            type="button"
               data="Sign in"
               className="bodySemi secondary"
-              onClick={handleSubmit}
+              onClick={login}
             />
 
             <Hr />
@@ -188,6 +212,6 @@ const LoginPage: React.FC<PageProps> = () => {
 
 export default LoginPage
 
-export const Head: HeadFC = () => <title>Login Page</title>
+// export const Head: HeadFC = () => <title>Login Page</title>
 
 

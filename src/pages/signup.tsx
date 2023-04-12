@@ -6,6 +6,10 @@ import styled from "styled-components";
 import Backg from "../assets/LeftSection.png";
 import Button from '../Components/global/Button';
 import { BsEyeFill } from 'react-icons/bs';
+import { auth } from "../Firebase/firebase";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { navigate } from "gatsby"
+
 
 const H1 = styled.h1`
 margin-bottom: 4px;
@@ -98,6 +102,22 @@ const Section1 = styled.div`
 
 
 const SignUpPage: React.FC<PageProps> = () => {
+  const [email , setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const signUp = (e:any) => {
+    e.preventDefault();
+    createUserWithEmailAndPassword(auth, email, password)
+      .then((userCredential:any) => {
+        console.log(userCredential);
+
+        navigate('/')
+        
+      })
+      .catch((error:any)=> {
+        console.log(error);
+      })
+  };
 
   const [passwordShow , setPasswordShow] = useState(false);
 
@@ -124,8 +144,8 @@ const SignUpPage: React.FC<PageProps> = () => {
                 type="text"
                 class="form-control"
                 placeholder="Email or phone number"
-                aria-label="Username"
-                aria-describedby="basic-addon1"
+                value={email}
+                onChange={(e:any) => setEmail(e.target.value)}
               />
               
             </div>
@@ -134,8 +154,9 @@ const SignUpPage: React.FC<PageProps> = () => {
                 type={passwordShow ? "text" : "password"}
                 class="form-control"
                 placeholder="Enter Password"
-                aria-label="Password"
-                aria-describedby="basic-addon1"
+                onChange={(e:any) => setPassword(e.target.value)}
+
+               
               />
               <PasswordBtn className="btn" onClick={togglePassword}>{passwordShow ? <i><BsEyeFill/></i> : <i><BsEyeFill/></i>}</PasswordBtn>
             </GroupBtn>
@@ -162,7 +183,7 @@ const SignUpPage: React.FC<PageProps> = () => {
             <Button
               data="Signup"
               className="bodySemi secondary"
-              onClick={handleSubmit}
+              onClick={signUp}
             />
 
             <Hr />

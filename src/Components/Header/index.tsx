@@ -46,6 +46,7 @@ const List = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: white;
+  z-index: 20;
 }
 `
 
@@ -55,6 +56,7 @@ const List2 = styled.div`
   flex-direction: column;
   align-items: center;
   background-color: white;
+  z-index:20;
 }
 `
 const I = styled.i`
