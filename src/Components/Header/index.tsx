@@ -86,9 +86,9 @@ const Header = () => {
   }
 `)
 
-  console.log("check the query",data);
-  console.log("Description",data.allStrapiAviraCollection.nodes[0].Description);
-  console.log("Title",data.allStrapiAviraCollection.nodes[0].Title);
+  // console.log("check the query",data);
+  // console.log("Description",data.allStrapiAviraCollection.nodes[0].Description);
+  // console.log("Title",data.allStrapiAviraCollection.nodes[0].Title);
   
 
   return (
