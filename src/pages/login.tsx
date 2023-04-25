@@ -9,7 +9,8 @@ import { BsEyeFill } from 'react-icons/bs';
 import { signInWithGoogle } from '../Firebase/firebase';
 import { auth } from '../Firebase/firebase';
 import { signInWithEmailAndPassword } from "firebase/auth";
-import { navigate } from "gatsby"
+import { navigate } from "gatsby";
+import axios from 'axios'
 
 
 
@@ -135,8 +136,15 @@ const LoginPage: React.FC<PageProps> = () => {
 
   const togglePassword = () => {
     setPasswordShow(!passwordShow);
-  } 
+  }
 
+  axios.get('http://localhost:1337/api/avira-collections')
+    .then((response)=>{
+      console.log(response.data);
+    })
+    .catch(error => {
+      console.log(error);
+    });
   // const handleSubmit = (e: any) => {
   //   e.preventDefault();
   // }
@@ -144,7 +152,6 @@ const LoginPage: React.FC<PageProps> = () => {
     <>
       <Wrapper className="d-flex">
         <Section1 className="h-100 d-none d-md-block">
-          
           <BackImg src={Backg} />
         </Section1>
         <Login className="h-100">

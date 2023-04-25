@@ -1,7 +1,8 @@
 import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
+import { HeadFC, PageProps, graphql } from "gatsby"
 import Header from "../Components/Header"
 import { HeroSection } from "../Components/HeroSection"
+import axios from "axios"
 
 
 const pageStyles = {
@@ -140,6 +141,7 @@ const links = [
 ]
 
 const IndexPage: React.FC<PageProps> = () => {
+  
   return (
       <>
         <Header/>
@@ -150,5 +152,6 @@ const IndexPage: React.FC<PageProps> = () => {
 }
 
 export default IndexPage
+
 
 export const Head: HeadFC = () => <title>Home Page</title>

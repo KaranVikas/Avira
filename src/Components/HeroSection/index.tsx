@@ -5,6 +5,9 @@ import card1 from '../../assets/cardImage1.png';
 import card2 from '../../assets/cardImage2.png';
 import card3 from '../../assets/cardImage3.png';
 import card4 from '../../assets/cardImage4.png';
+import { graphql, useStaticQuery } from 'gatsby';
+import { log } from 'console';
+// import {  graphql , useStaticQuery } from 'gatsby';
 
 const WrapperContain = styled.div`
 padding:64px 56px;
@@ -63,6 +66,37 @@ background-size: cover ; */
 `
 
 export const HeroSection = () => {
+    const data = useStaticQuery(graphql`
+    query {
+      allStrapiAviraCollection {
+        nodes {
+          Description
+          Title
+        }
+      }
+    }
+  `)
+  console.log("data",data);
+    const dataDesc0 = data.allStrapiAviraCollection.nodes[0].Description;
+    const dataDesc1 = data.allStrapiAviraCollection.nodes[1].Description;
+    const dataDesc2 = data.allStrapiAviraCollection.nodes[2].Description;
+    const dataDesc3 = data.allStrapiAviraCollection.nodes[3].Description;
+
+    console.log("dataDesc0", dataDesc0);
+    console.log("dataDesc1", dataDesc1);
+    console.log("dataDesc2", dataDesc2);
+    console.log("dataDesc3", dataDesc3);
+    
+    const {dataTitle0} = data.allStrapiAviraCollection.nodes[0].Title;
+    const dataTitle1 = data.allStrapiAviraCollection.nodes[1].Title;
+    const dataTitle2 = data.allStrapiAviraCollection.nodes[2].Title;
+    const dataTitle3 = data.allStrapiAviraCollection.nodes[3].Title;
+    
+    console.log("dataTitle", dataTitle0);
+    console.log("dataTitle", dataTitle1);
+    console.log("dataTitle", dataTitle2);
+    console.log("dataTitle", dataTitle3);
+
     return (
 
         <>
@@ -70,18 +104,20 @@ export const HeroSection = () => {
                 <div className="row gap-3 justify-content-center w-100 ">
                     <Section1 className="col-sm-4 col-12">
                         <Img src={card1}/>
+                        
                         <Card 
-                            title="Brands Everyone’s Crushing on"
-                            content="Explore All"
+                            title= {` ${dataDesc0}`}
+                            content= {`${dataTitle0}`}
                             link="" />
+                        
                     </Section1>
                     <Section2 className="col-sm-7 col-12">
                         <Sec21 className="row">
                             <div className="col">
                             <Img src={card2}/>
                             <Card 
-                                title="456 Items"
-                                content="Footwear"
+                                title= {` ${dataDesc1}`}
+                                content= {`${dataTitle1}`}
                                 link="" />
                                  </div>
                         </Sec21>
@@ -89,8 +125,8 @@ export const HeroSection = () => {
                             <SubSec2 className="col">
                             <Img src={card3}/>
                                 <Card 
-                                    title="680 Items"
-                                    content="Sweaters" 
+                                   title= {` ${dataDesc2}`}
+                                   content= {`${dataTitle2}`}
                                     link=""
                                 />
                             
@@ -98,8 +134,8 @@ export const HeroSection = () => {
                             <SubSec22 className="col">
                             <Img src={card4}/>
                                 <Card 
-                                    title="341 Items"
-                                    content="Demins" 
+                                   title= {` ${dataDesc3}`}
+                                   content= {`${dataTitle3}`}
                                     link=""
                                 />
                             </SubSec22>
