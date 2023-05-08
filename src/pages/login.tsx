@@ -157,7 +157,7 @@ const LoginPage: React.FC<PageProps> = () => {
         <Login className="h-100">
           <LoginContent className="">
             <H1>Nice to see you again!</H1>
-            <div class="mb-3 d-flex justify-content-center">
+            <div className="mb-3 d-flex justify-content-center">
               <InputWrapper
                 type="text"
                 placeholder="Email or phone number"

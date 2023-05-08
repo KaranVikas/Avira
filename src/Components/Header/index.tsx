@@ -4,6 +4,7 @@ import { BsPerson, BsCart } from 'react-icons/bs';
 import { AiOutlineHeart } from 'react-icons/ai';
 import styled from 'styled-components';
 import { graphql, useStaticQuery } from 'gatsby';
+import { useProductsContext } from '../../context/products_context';
 // import { BsPerson } from "@react-icons/all-files/Bs/BsPerson";
 
 const WrapperContain = styled.div`
@@ -75,20 +76,26 @@ width:30%;
 `
 
 const Header = () => {
-  const data = useStaticQuery(graphql`
-  query {
-    allStrapiAviraCollection {
-      nodes {
-        Description
-        Title
-      }
-    }
-  }
-`)
 
-  console.log("check the query",data);
-  console.log("Description",data.allStrapiAviraCollection.nodes[0].Description);
-  console.log("Title",data.allStrapiAviraCollection.nodes[0].Title);
+  const data = useProductsContext();
+  console.log("data",data)
+
+
+
+//   const data = useStaticQuery(graphql`
+//   query {
+//     allStrapiAviraCollection {
+//       nodes {
+//         Description
+//         Title
+//       }
+//     }
+//   }
+// `)
+
+  // console.log("check the query",data);
+  // console.log("Description",data.allStrapiAviraCollection.nodes[0].Description);
+  // console.log("Title",data.allStrapiAviraCollection.nodes[0].Title);
   
 
   return (

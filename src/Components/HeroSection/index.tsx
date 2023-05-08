@@ -66,36 +66,36 @@ background-size: cover ; */
 `
 
 export const HeroSection = () => {
-    const data = useStaticQuery(graphql`
-    query {
-      allStrapiAviraCollection {
-        nodes {
-          Description
-          Title
-        }
-      }
-    }
-  `)
-  console.log("data",data);
-    const dataDesc0 = data.allStrapiAviraCollection.nodes[0].Description;
-    const dataDesc1 = data.allStrapiAviraCollection.nodes[1].Description;
-    const dataDesc2 = data.allStrapiAviraCollection.nodes[2].Description;
-    const dataDesc3 = data.allStrapiAviraCollection.nodes[3].Description;
+//     const data = useStaticQuery(graphql`
+//     query {
+//       allStrapiAviraCollection {
+//         nodes {
+//           Description
+//           Title
+//         }
+//       }
+//     }
+//   `)
+//   console.log("data",data);
+//     const dataDesc0 = data.allStrapiAviraCollection.nodes[0].Description;
+//     const dataDesc1 = data.allStrapiAviraCollection.nodes[1].Description;
+//     const dataDesc2 = data.allStrapiAviraCollection.nodes[2].Description;
+//     const dataDesc3 = data.allStrapiAviraCollection.nodes[3].Description;
 
-    console.log("dataDesc0", dataDesc0);
-    console.log("dataDesc1", dataDesc1);
-    console.log("dataDesc2", dataDesc2);
-    console.log("dataDesc3", dataDesc3);
+//     console.log("dataDesc0", dataDesc0);
+//     console.log("dataDesc1", dataDesc1);
+//     console.log("dataDesc2", dataDesc2);
+//     console.log("dataDesc3", dataDesc3);
     
-    const {dataTitle0} = data.allStrapiAviraCollection.nodes[0].Title;
-    const dataTitle1 = data.allStrapiAviraCollection.nodes[1].Title;
-    const dataTitle2 = data.allStrapiAviraCollection.nodes[2].Title;
-    const dataTitle3 = data.allStrapiAviraCollection.nodes[3].Title;
+//     const {dataTitle0} = data.allStrapiAviraCollection.nodes[0].Title;
+//     const dataTitle1 = data.allStrapiAviraCollection.nodes[1].Title;
+//     const dataTitle2 = data.allStrapiAviraCollection.nodes[2].Title;
+//     const dataTitle3 = data.allStrapiAviraCollection.nodes[3].Title;
     
-    console.log("dataTitle", dataTitle0);
-    console.log("dataTitle", dataTitle1);
-    console.log("dataTitle", dataTitle2);
-    console.log("dataTitle", dataTitle3);
+//     console.log("dataTitle", dataTitle0);
+//     console.log("dataTitle", dataTitle1);
+//     console.log("dataTitle", dataTitle2);
+//     console.log("dataTitle", dataTitle3);
 
     return (
 
@@ -105,39 +105,39 @@ export const HeroSection = () => {
                     <Section1 className="col-sm-4 col-12">
                         <Img src={card1}/>
                         
-                        <Card 
+                        {/* <Card 
                             title= {` ${dataDesc0}`}
                             content= {`${dataTitle0}`}
-                            link="" />
+                            link="" /> */}
                         
                     </Section1>
                     <Section2 className="col-sm-7 col-12">
                         <Sec21 className="row">
                             <div className="col">
                             <Img src={card2}/>
-                            <Card 
+                            {/* <Card 
                                 title= {` ${dataDesc1}`}
                                 content= {`${dataTitle1}`}
-                                link="" />
+                                link="" /> */}
                                  </div>
                         </Sec21>
                         <Sec22 className="row gap-3 ">
                             <SubSec2 className="col">
                             <Img src={card3}/>
-                                <Card 
+                                {/* <Card 
                                    title= {` ${dataDesc2}`}
                                    content= {`${dataTitle2}`}
                                     link=""
-                                />
+                                /> */}
                             
                             </SubSec2>
                             <SubSec22 className="col">
                             <Img src={card4}/>
-                                <Card 
+                                {/* <Card 
                                    title= {` ${dataDesc3}`}
                                    content= {`${dataTitle3}`}
                                     link=""
-                                />
+                                /> */}
                             </SubSec22>
                         </Sec22>
                     </Section2>
