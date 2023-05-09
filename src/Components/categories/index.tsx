@@ -52,7 +52,7 @@ const Img = styled.img`
 
 const Category = () => {
   return (
-    <div classname="container-fluid">
+    <div className="container-fluid">
         <H1>SHOP BY CATEGORIES</H1>
         <Contain className="row gap-5">
             <div className="col-sm col-12">

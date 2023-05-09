@@ -15,33 +15,25 @@ border-bottom: 2px solid rgba(0, 0, 0, 0.25);
 @media screen and (max-width: 450px) {
   padding:8px 10px;
 }
-
 `
-
 const Contain = styled.div`
 @media screen and (max-width: 450px) {
-    
 }
 `
-
 const Nav = styled.nav`
 @media screen and (max-width: 450px) {
- 
 }
 `
-
 const Li = styled.li`
 margin-right:40px;
 `
 const Li2 = styled.li`
 margin-right:32px;
 color:#DB6B97;
-
 `
 const A2 = styled.a`
 color: #DB6B97 !important;
 `
-
 const List = styled.div`
   @media screen and (max-width: 450px) {
   display:flex;
@@ -51,7 +43,6 @@ const List = styled.div`
   z-index: 20;
 }
 `
-
 const List2 = styled.div`
   @media screen and (max-width: 450px) {
   display:flex;
@@ -74,13 +65,9 @@ width:30%;
   justify-content: space-between;
 }
 `
-
 const Header = () => {
-
   const data = useProductsContext();
   console.log("data",data)
-
-
 
 //   const data = useStaticQuery(graphql`
 //   query {
@@ -96,24 +83,18 @@ const Header = () => {
   // console.log("check the query",data);
   // console.log("Description",data.allStrapiAviraCollection.nodes[0].Description);
   // console.log("Title",data.allStrapiAviraCollection.nodes[0].Title);
-  
-
   return (
     <WrapperContain className="container-fluid">
       <nav className="navbar navbar-expand-lg bg-body-tertiary">
         <Contain className="container-fluid ">
           <LogoDiv>
-
             <a className="navbar-brand" href="#"><Logo/></a>
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
             </button>
-
           </LogoDiv>
-
           <div className="collapse navbar-collapse body1Regular" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0 w-100 justify-content-between">
-              
               <List className="d-flex">
               <Li className="nav-item">
                 <a className="nav-link active" aria-current="page" href="/">Home</a>
@@ -131,10 +112,7 @@ const Header = () => {
                 <a className="nav-link active" aria-current="page" href="/contact">Contact</a>
               </Li>
               </List>
-              
-           
               <List2 className="d-flex body2Semi accent">
-
                 <Li2 className="nav-item">
                   <A2 className="nav-link active" aria-current="page" href="/login"><I><BsPerson/></I>Login/Register</A2>
                 </Li2>
@@ -145,12 +123,9 @@ const Header = () => {
                     </I>
                   </A2>
                 </Li2>
-
                 <Li2 className="nav-item">
                   <A2 className="nav-link active" aria-current="page" href="#">
-                  
-                      <I><BsCart/></I>
-                  
+                      <I><BsCart/>Cart</I>
                   </A2>
                 </Li2>
                 

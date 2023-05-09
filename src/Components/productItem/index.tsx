@@ -2,6 +2,7 @@ import React , {useState} from 'react'
 import styled from 'styled-components' 
 import Itemimg from '../../assets/Item1.png';
 import {HeartFill , HeartOutline, Star} from '../../svg'
+import { Link } from "gatsby"
 
 const Item = styled.div`
 width: 240px;
@@ -12,7 +13,10 @@ position:relative;
 const Img = styled.img`
 width:100%;
 object-fit: contain;
-
+opacity: .7;
+&:hover {
+    opacity: 1;
+}
 `
 
 const Heart = styled.button`
@@ -52,8 +56,9 @@ const ProductItem = () => {
     }
   return (
     <Item >
-
+        <Link to="/">
         <Img src={Itemimg} alt="product item" />
+        </Link>
             <StarBtn>
                 <Star/> 4.9
             </StarBtn>
