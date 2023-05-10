@@ -1,9 +1,12 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import Header from "../Components/Header"
+// import { useParams } from 'gatsby'
+import { useProductsContext } from "../context/products_context"
 
+const ProductPage: React.FC<PageProps> = (location) => {
+ 
 
-const ProductPage: React.FC<PageProps> = () => {
   return (
       <>
         <Header/>

@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import ProductItem from '../productItem';
 import AddBtn from '../addBtn';
+import  { useProductsContext } from '../../context/products_context' 
 
 const Brand = styled.h3`
     font-weight: 600;
@@ -34,13 +35,29 @@ const NPrice = styled.span`
 
 
 const ProductCard = () => {
+    const {
+        products_loading: loading,
+        products_error: error,
+        featured_products:featured
+        } = useProductsContext();
+
+        if(loading){
+            // loading 
+        }
+        if(error){
+            // return error component 
+        }
   return (
     <div>
-        <ProductItem/>
-        <Brand>ZARA</Brand>
+        {featured.map((product) => {
+            console.log("Productcard", product)
+            return <ProductItem data={product} />
+        } )}
+        {/* <ProductItem/> */}
+        {/* <Brand>ZARA</Brand>
         <Desc>Green High Neck Knit Sweater</Desc>
         <Price>Rs. 2999<NPrice>Rs. 2999</NPrice></Price>
-        <AddBtn />
+        <AddBtn /> */}
     </div>
   )
 }
