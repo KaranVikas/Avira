@@ -13,8 +13,9 @@ position:relative;
 
 const Img = styled.img`
 width:100%;
+height:100%;
 object-fit: contain;
-opacity: .7;
+opacity: .75;
 &:hover {
     opacity: 1;
 }
@@ -59,8 +60,11 @@ const Desc = styled.h4`
     line-height: 24px;
     color: #737373;
 `
-const Price = styled.h5`
-    margin: 16px 0px;
+const Price = styled.span`
+    display:block;
+    margin-top:10px;
+    margin-bottom:10px;
+    /* margin: 16px 0px; */
     font-weight: 600;
     font-size: 14px;
     line-height: 24px;
@@ -68,25 +72,36 @@ const Price = styled.h5`
     text-decoration: line-through;
 `
 const NPrice = styled.span`
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
     margin-left:8px;
     color: #DB6B97;
-    text-decoration: none;
+    text-decoration: none !important;
+`
+const Space = styled.div`
+    margin-top:15px;
+    margin-bottom:15px;
 `
 
 
 const ProductItem = ({data}) => {
-    const {id, attributes:{name, oldPrice, newPrice}}=data
+    const {id, attributes:{name, oldPrice, newPrice,image}}=data
     console.log('hiiiiiiiiii',name);
     const [heart , SetHeart] = useState(false);
     const toggle = () => {
         SetHeart(s => !s);
     }
+    const plink = 'http://localhost:1337'
+    const pimage = data.attributes.image.data[0].attributes.url
+    console.log(`${plink}${pimage}`,"img")
   return (
     <>
     <Item >
-       <Link to={`/product/${id}`}> 
+       <Link to={`/product${id}/`}> 
         {/* <Link to={`/product?id:1`} state={id}> */}
-        <Img src={Itemimg} alt="product item" />
+        <Img src={`${plink}${pimage}`} alt="product item" />
         </Link>
             <StarBtn>
                 <Star/> 4.9
@@ -100,6 +115,8 @@ const ProductItem = ({data}) => {
         <Desc>Green High Neck Knit Sweater</Desc>
         <Price>{oldPrice}<NPrice>{newPrice}</NPrice></Price>
         <AddBtn />
+        <Space></Space>
+        
     </>
   )
 }

@@ -119,7 +119,8 @@ const Header = () => {
                 <Li2 className="nav-item">
                   <A2 className="nav-link active" aria-current="page" href="#">
                     <I>
-                      <AiOutlineHeart/>2
+                      <AiOutlineHeart/>
+                      2
                     </I>
                   </A2>
                 </Li2>

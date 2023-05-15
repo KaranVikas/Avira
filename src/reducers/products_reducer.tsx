@@ -1,4 +1,4 @@
-import { log } from "console"
+
 import {
     GET_PRODUCTS_SUCCESS,
     GET_PRODUCTS_ERROR,    

@@ -8,7 +8,7 @@ exports.createPages = async function ({ actions, graphql }) {
     data.data.forEach(element => {
      
       actions.createPage({
-        path:`product/${element.id}`,
+        path:`product${element.id}`,
         component:require.resolve('./src/templates/productItem.tsx'),
         context:element
       })

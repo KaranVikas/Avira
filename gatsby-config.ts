@@ -14,40 +14,40 @@ const config: GatsbyConfig = {
 
 export default config;
 
-// require("dotenv").config({
-//   path: `.env.${process.env.NODE_ENV}`,
-// });
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
 
-// const strapiConfig = {
-//   apiURL: "http://127.0.0.1:1337",
-//   accessToken: "4b62372b28e5338b1ba5762ac51b1e616c90f9fa53033f99699af18ebab39e87d77a1d03e5d01a825b8e904de248d26c6013e4f156c7352664bd7aa5414cc0e81c7a282e44639a0c399e844c3fdead30ec50ffbf991056ce69c9493f5f1b9649d204ca0a5e5280be160ce454617ed2c7d705ddf353aa3a39a3f9ae82697b92c5",
-//   collectionTypes: ["avira-collection"],
-//   // collectionTypes: [{
-//   //   singularName: "avira-collection",
-//   //   queryParams: {
-//   //     populate: "*"
-//   //   }
-//   // }],
-//   singleTypes: [],
-//   remoteFileHeaders: {
-//     /**
-//      * Customized request headers
-//      * For http request with a image or other files need authorization
-//      * For expamle: Fetch a CDN file which has a security config when gatsby building needs
-//      */
-//     Referer: "https://your-site-domain/",
-//     // Authorization: "Bearer eyJhabcdefg_replace_it_with_your_own_token",
-//   },
-// };
+const strapiConfig = {
+  apiURL: "http://127.0.0.1:1337",
+  accessToken: "f95fa2675a8aded169fca122c941c508c43cd3257abb34062449803d1e589bd893a2ac0c27d48bfcd54f6844e0a8535cba901bfa5876572282d542809874e69bffad81a3dc52259fa04a0f9fb78b1fde5821c00ef374294a9d9fe504ba13f46bea009b1c31eaef21ecac013340178b55e9394ab7c5b447f17f7546ab6cbf90b4",
+  // collectionTypes: ["product"],
+  collectionTypes: [{
+    singularName: "product",
+    queryParams: {
+      populate: "*"
+    }
+  }],
+  singleTypes: [],
+  remoteFileHeaders: {
+    /**
+     * Customized request headers
+     * For http request with a image or other files need authorization
+     * For expamle: Fetch a CDN file which has a security config when gatsby building needs
+     */
+    Referer: "https://your-site-domain/",
+    // Authorization: "Bearer eyJhabcdefg_replace_it_with_your_own_token",
+  },
+};
 
 module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
-    // {
-    //   resolve: `gatsby-source-strapi`,
-    //   options: strapiConfig,
-    // },
+    {
+      resolve: `gatsby-source-strapi`,
+      options: strapiConfig,
+    },
   ],
 };

@@ -13,7 +13,7 @@ const ButtonWrapper = styled.button`
     border-radius: 8px;
     background: #2D2D2D;
     border-radius: 8px;
-    padding: 9px 149px;
+    padding: 9px 129px;
     color:#ffffff;
 `
 
