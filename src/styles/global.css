@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Poppins:wght@400;600&display=swap');
+
+:root{
+    --primary:#2D2D2D;;
+    --secondary: #FFFFFF;
+    --tertiary: #737373;
+    --accent:#DB6B97;
+    --green: #2DC071;
+}
+
+.green{
+    color:#2DC071;
+}
+
+.primary{
+    color:#2D2D2D;
+}
+.secondary{
+    color:#FFFFFF;
+}
+
+.tertiary{
+    color:#737373;
+}
+
+.accent{
+    color:var(--accent);
+}
+body{
+    font-family: 'Poppins';
+    font-style: normal;
+}
+
+h1{
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 32px;
+    color: #2D2D2D;
+}
+
+h2{
+    font-weight: 600;
+    font-size: 19px;
+    line-height: 24px;
+    /* color: #2D2D2D; */
+}
+.desktopDisplay{
+    font-weight: 700;
+    font-size: 44px;
+    line-height: 64px;
+    color: #2D2D2D;
+}
+.body1Regular{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2D2D2D;
+}
+
+.bodySemi{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2D2D2D;
+}
+.body2Regular{
+    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #737373
+}
+.body2Semi{
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 24px;
+    color: var(--accent);
+}
+.caption{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #2D2D2D;
+}
+.captionSemi{
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 16px;
+    color: var(--accent);
+}
